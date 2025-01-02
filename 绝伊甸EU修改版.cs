@@ -996,26 +996,26 @@ namespace MyScriptNamespace
                         if (myindex == 4 && P1塔[0] >= 2) dealpos = new(eastTower ? 113.08f : 86.92f, 0, 90.81f);
                         if (myindex == 4 && P1塔[0] == 1 && P1塔[1] > 2) dealpos = new(eastTower ? 115.98f : 84.02f, 0, 100f);
                         if (myindex == 4 && P1塔[0] == 1 && P1塔[2] > 2) dealpos = new(eastTower ? 113.08f : 86.92f, 0, 109.18f);
-                        if (myindex == 5 && P1塔[1] >= 2) dealpos = new(eastTower ? 115.98f : 84.02f, 0, 100f);
-                        if (myindex == 5 && P1塔[1] == 1 && P1塔[2] > 2) dealpos = new(eastTower ? 113.08f : 86.92f, 0, 109.18f);
-                        if (myindex == 5 && P1塔[1] == 1 && P1塔[0] > 2) dealpos = new(eastTower ? 113.08f : 86.92f, 0, 90.81f);
-                        if (myindex == 6 && P1塔[2] >= 2) dealpos = new(eastTower ? 113.08f : 86.92f, 0, 109.18f);
-                        if (myindex == 6 && P1塔[2] == 1 && P1塔[0] > 2) dealpos = new(eastTower ? 113.08f : 86.92f, 0, 90.81f);
-                        if (myindex == 6 && P1塔[2] == 1 && P1塔[1] > 2) dealpos = new(eastTower ? 115.98f : 84.02f, 0, 100f);
+                        if (myindex == 6 && P1塔[1] >= 2) dealpos = new(eastTower ? 115.98f : 84.02f, 0, 100f);
+                        if (myindex == 6 && P1塔[1] == 1 && P1塔[2] > 2) dealpos = new(eastTower ? 113.08f : 86.92f, 0, 109.18f);
+                        if (myindex == 6 && P1塔[1] == 1 && P1塔[0] > 2) dealpos = new(eastTower ? 113.08f : 86.92f, 0, 90.81f);
+                        if (myindex == 5 && P1塔[2] >= 2) dealpos = new(eastTower ? 113.08f : 86.92f, 0, 109.18f);
+                        if (myindex == 5 && P1塔[2] == 1 && P1塔[0] > 2) dealpos = new(eastTower ? 113.08f : 86.92f, 0, 90.81f);
+                        if (myindex == 5 && P1塔[2] == 1 && P1塔[1] > 2) dealpos = new(eastTower ? 115.98f : 84.02f, 0, 100f);
                         
                         Vector3 towerpos = default;
-                        if (myindex == 2) towerpos = new(eastTower ? 113.08f : 86.92f, 0, 90.81f);
+                        if (myindex == 2) towerpos = new(eastTower ? 115.98f : 84.02f, 0, 100f);
                         if (myindex == 3) towerpos = new(eastTower ? 115.98f : 84.02f, 0, 100f);
                         if (myindex == 7) towerpos = new(eastTower ? 113.08f : 86.92f, 0, 109.18f);
                         if (myindex == 4 && P1塔[0] >= 2) dealpos = new(eastTower ? 113.08f : 86.92f, 0, 90.81f);
                         if (myindex == 4 && P1塔[0] == 1 && P1塔[1] > 2) dealpos = new(eastTower ? 115.98f : 84.02f, 0, 100f);
                         if (myindex == 4 && P1塔[0] == 1 && P1塔[2] > 2) dealpos = new(eastTower ? 113.08f : 86.92f, 0, 109.18f);
-                        if (myindex == 5 && P1塔[1] >= 2) dealpos = new(eastTower ? 115.98f : 84.02f, 0, 100f);
-                        if (myindex == 5 && P1塔[1] == 1 && P1塔[2] > 2) dealpos = new(eastTower ? 113.08f : 86.92f, 0, 109.18f);
-                        if (myindex == 5 && P1塔[1] == 1 && P1塔[0] > 2) dealpos = new(eastTower ? 113.08f : 86.92f, 0, 90.81f);
-                        if (myindex == 6 && P1塔[2] >= 2) dealpos = new(eastTower ? 113.08f : 86.92f, 0, 109.18f);
-                        if (myindex == 6 && P1塔[2] == 1 && P1塔[0] > 2) dealpos = new(eastTower ? 113.08f : 86.92f, 0, 90.81f);
-                        if (myindex == 6 && P1塔[2] == 1 && P1塔[1] > 2) dealpos = new(eastTower ? 115.98f : 84.02f, 0, 100f);
+                        if (myindex == 6 && P1塔[1] >= 2) dealpos = new(eastTower ? 115.98f : 84.02f, 0, 100f);
+                        if (myindex == 6 && P1塔[1] == 1 && P1塔[2] > 2) dealpos = new(eastTower ? 113.08f : 86.92f, 0, 109.18f);
+                        if (myindex == 6 && P1塔[1] == 1 && P1塔[0] > 2) dealpos = new(eastTower ? 113.08f : 86.92f, 0, 90.81f);
+                        if (myindex == 5 && P1塔[2] >= 2) dealpos = new(eastTower ? 113.08f : 86.92f, 0, 109.18f);
+                        if (myindex == 5 && P1塔[2] == 1 && P1塔[0] > 2) dealpos = new(eastTower ? 113.08f : 86.92f, 0, 90.81f);
+                        if (myindex == 5 && P1塔[2] == 1 && P1塔[1] > 2) dealpos = new(eastTower ? 115.98f : 84.02f, 0, 100f);
 
                         var dp = accessory.Data.GetDefaultDrawProperties();
                         dp.Name = "P1_雷塔_塔处理位置_ND";
@@ -1048,7 +1048,7 @@ namespace MyScriptNamespace
                         var dy = myindex == 1 ? -5.5f : 5.5f;
 
                         var dp = accessory.Data.GetDefaultDrawProperties();
-                        dp.Name = "P1_雷塔_塔处理位置_T1";
+                        dp.Name = "P1_火塔_塔处理位置_T1";
                         dp.Scale = new(2);
                         dp.Owner = accessory.Data.Me;
                         dp.TargetPosition = new(100 + dx1, 0, 100 + dy);
@@ -1058,7 +1058,7 @@ namespace MyScriptNamespace
                         accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
 
                         dp = accessory.Data.GetDefaultDrawProperties();
-                        dp.Name = "P1_雷塔_塔处理位置_T2";
+                        dp.Name = "P1_火塔_塔处理位置_T2";
                         dp.Scale = new(2);
                         dp.Position = new(100 + dx1, 0, 100 + dy);
                         dp.TargetPosition = new(100 + dx2, 0, 100 + dy);
@@ -1068,7 +1068,7 @@ namespace MyScriptNamespace
                         accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
 
                         dp = accessory.Data.GetDefaultDrawProperties();
-                        dp.Name = "P1_雷塔_塔处理位置_T3";
+                        dp.Name = "P1_火塔_塔处理位置_T3";
                         dp.Scale = new(2);
                         dp.Owner = accessory.Data.Me;
                         dp.TargetPosition = new(100 + dx2, 0, 100 + dy);
@@ -1082,34 +1082,34 @@ namespace MyScriptNamespace
                     {
                         Vector3 dealpos = default;
                         if (myindex==2) dealpos = new(eastTower ? 102f : 98f, 0, 90.81f);
-                        if (myindex==3) dealpos = new(eastTower ? 102f : 98f, 0, 100f);
-                        if (myindex==7) dealpos = new(eastTower ? 102f : 98f, 0, 109.18f);
+                        if (myindex==7) dealpos = new(eastTower ? 102f : 98f, 0, 100f);
+                        if (myindex==3) dealpos = new(eastTower ? 102f : 98f, 0, 109.18f);
                         if (myindex == 4 && P1塔[0] >= 2) dealpos = new(eastTower ? 102f : 98f, 0, 90.81f);
                         if (myindex == 4 && P1塔[0] == 1 && P1塔[1] > 2) dealpos = new(eastTower ? 102f : 98f, 0, 100f);
                         if (myindex == 4 && P1塔[0] == 1 && P1塔[2] > 2) dealpos = new(eastTower ? 102f : 98f, 0, 109.18f);
-                        if (myindex == 5 && P1塔[1] >= 2) dealpos = new(eastTower ? 102f : 98f, 0, 100f);
-                        if (myindex == 5 && P1塔[1] == 1 && P1塔[2] > 2) dealpos = new(eastTower ? 102f : 98f, 0, 109.18f);
-                        if (myindex == 5 && P1塔[1] == 1 && P1塔[0] > 2) dealpos = new(eastTower ? 102f : 98f, 0, 90.81f);
-                        if (myindex == 6 && P1塔[2] >= 2) dealpos = new(eastTower ? 102f : 98f, 0, 109.18f);
-                        if (myindex == 6 && P1塔[2] == 1 && P1塔[0] > 2) dealpos = new(eastTower ? 102f : 98f, 0, 90.81f);
-                        if (myindex == 6 && P1塔[2] == 1 && P1塔[1] > 2) dealpos = new(eastTower ? 102f : 98f, 0, 100f);
+                        if (myindex == 6 && P1塔[1] >= 2) dealpos = new(eastTower ? 102f : 98f, 0, 100f);
+                        if (myindex == 6 && P1塔[1] == 1 && P1塔[2] > 2) dealpos = new(eastTower ? 102f : 98f, 0, 109.18f);
+                        if (myindex == 6 && P1塔[1] == 1 && P1塔[0] > 2) dealpos = new(eastTower ? 102f : 98f, 0, 90.81f);
+                        if (myindex == 5 && P1塔[2] >= 2) dealpos = new(eastTower ? 102f : 98f, 0, 109.18f);
+                        if (myindex == 5 && P1塔[2] == 1 && P1塔[0] > 2) dealpos = new(eastTower ? 102f : 98f, 0, 90.81f);
+                        if (myindex == 5 && P1塔[2] == 1 && P1塔[1] > 2) dealpos = new(eastTower ? 102f : 98f, 0, 100f);
 
                         Vector3 towerpos = default;
                         if (myindex==2) towerpos = new(eastTower ? 113.08f : 86.92f, 0, 90.81f);
-                        if (myindex==3) towerpos = new(eastTower ? 115.98f : 84.02f, 0, 100f);
-                        if (myindex==7) towerpos = new(eastTower ? 113.08f : 86.92f, 0, 109.18f);
+                        if (myindex==7) towerpos = new(eastTower ? 115.98f : 84.02f, 0, 100f);
+                        if (myindex==3) towerpos = new(eastTower ? 113.08f : 86.92f, 0, 109.18f);
                         if (myindex == 4 && P1塔[0] >= 2) towerpos = new(eastTower ? 113.08f : 86.92f, 0, 90.81f);
                         if (myindex == 4 && P1塔[0] == 1 && P1塔[1] > 2) towerpos = new(eastTower ? 115.98f : 84.02f, 0, 100f);
                         if (myindex == 4 && P1塔[0] == 1 && P1塔[2] > 2) towerpos = new(eastTower ? 113.08f : 86.92f, 0, 109.18f);
-                        if (myindex == 5 && P1塔[1] >= 2) towerpos = new(eastTower ? 115.98f : 84.02f, 0, 100f);
-                        if (myindex == 5 && P1塔[1] == 1 && P1塔[2] > 2) towerpos = new(eastTower ? 113.08f : 86.92f, 0, 109.18f);
-                        if (myindex == 5 && P1塔[1] == 1 && P1塔[0] > 2) towerpos = new(eastTower ? 113.08f : 86.92f, 0, 90.81f);
-                        if (myindex == 6 && P1塔[2] >= 2) towerpos = new(eastTower ? 113.08f : 86.92f, 0, 109.18f);
-                        if (myindex == 6 && P1塔[2] == 1 && P1塔[0] > 2) towerpos = new(eastTower ? 113.08f : 86.92f, 0, 90.81f);
-                        if (myindex == 6 && P1塔[2] == 1 && P1塔[1] > 2) towerpos = new(eastTower ? 115.98f : 84.02f, 0, 100f);
+                        if (myindex == 6 && P1塔[1] >= 2) towerpos = new(eastTower ? 115.98f : 84.02f, 0, 100f);
+                        if (myindex == 6 && P1塔[1] == 1 && P1塔[2] > 2) towerpos = new(eastTower ? 113.08f : 86.92f, 0, 109.18f);
+                        if (myindex == 6 && P1塔[1] == 1 && P1塔[0] > 2) towerpos = new(eastTower ? 113.08f : 86.92f, 0, 90.81f);
+                        if (myindex == 5 && P1塔[2] >= 2) towerpos = new(eastTower ? 113.08f : 86.92f, 0, 109.18f);
+                        if (myindex == 5 && P1塔[2] == 1 && P1塔[0] > 2) towerpos = new(eastTower ? 113.08f : 86.92f, 0, 90.81f);
+                        if (myindex == 5 && P1塔[2] == 1 && P1塔[1] > 2) towerpos = new(eastTower ? 115.98f : 84.02f, 0, 100f);
 
                         var dp = accessory.Data.GetDefaultDrawProperties();
-                        dp.Name = "P1_雷塔_塔处理位置_ND";
+                        dp.Name = "P1_火塔_塔处理位置_ND";
                         dp.Scale = new(2);
                         dp.Owner = accessory.Data.Me;
                         dp.TargetPosition = dealpos;
@@ -1119,7 +1119,7 @@ namespace MyScriptNamespace
                         accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
 
                         dp = accessory.Data.GetDefaultDrawProperties();
-                        dp.Name = "P1_雷塔_塔_ND";
+                        dp.Name = "P1_火塔_塔_ND";
                         dp.Scale = new(4);
                         dp.Position = towerpos;
                         dp.Color = accessory.Data.DefaultSafeColor;
