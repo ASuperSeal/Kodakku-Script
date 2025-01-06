@@ -852,15 +852,15 @@ namespace MyScriptNamespace
 
                     dealpos1 = idleObjIndex.IndexOf(myindex) switch
                     {
-                        0 => i1p1,
-                        1 => i2p1,
+                        1 => i1p1,
+                        0 => i2p1,
                         2 => i3p1,
                         3 => i4p1,
                     };
                     dealpos2 = idleObjIndex.IndexOf(myindex) switch
                     {
-                        0 => i1p2,
-                        1 => i2p2,
+                        1 => i1p2,
+                        10 => i2p2,
                         2 => i3p2,
                         3 => i4p2,
                     };
@@ -1819,6 +1819,27 @@ namespace MyScriptNamespace
                     if (!P2LightRampantCircle.Contains(4)) tetherGroup.Add(4);
                 }
                 if (P2LightRampant8DirSet == P2LightRampant8DirEmum.TN_Up)
+              {             
+                     int count = 0;
+
+                   if (P2LightRampantCircle.Contains(2)) count++;
+                   if (P2LightRampantCircle.Contains(3)) count++;
+                   if (P2LightRampantCircle.Contains(0)) count++;
+                   if (P2LightRampantCircle.Contains(1)) count++;
+
+             if (count == 2)
+
+                {
+                    if (!P2LightRampantCircle.Contains(6)) tetherGroup.Add(6);
+                    if (!P2LightRampantCircle.Contains(2)) tetherGroup.Add(2);
+                    if (!P2LightRampantCircle.Contains(3)) tetherGroup.Add(3);
+                    if (!P2LightRampantCircle.Contains(0)) tetherGroup.Add(0);
+                    if (!P2LightRampantCircle.Contains(1)) tetherGroup.Add(1);
+                    if (!P2LightRampantCircle.Contains(5)) tetherGroup.Add(5);
+                    if (!P2LightRampantCircle.Contains(4)) tetherGroup.Add(4);
+                    if (!P2LightRampantCircle.Contains(7)) tetherGroup.Add(7);
+                }
+          else
                 {
                     if (!P2LightRampantCircle.Contains(2)) tetherGroup.Add(2);
                     if (!P2LightRampantCircle.Contains(3)) tetherGroup.Add(3);
@@ -1829,8 +1850,7 @@ namespace MyScriptNamespace
                     if (!P2LightRampantCircle.Contains(7)) tetherGroup.Add(7);
                     if (!P2LightRampantCircle.Contains(6)) tetherGroup.Add(6);
                 }
-
-
+              }
                 var myGroupIndex = tetherGroup.IndexOf(myindex);
                 Vector3 t1 = new(100.00f, 0, 084.00f);
                 Vector3 t2 = new(113.85f, 0, 092.00f);
