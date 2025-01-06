@@ -615,12 +615,26 @@ namespace MyScriptNamespace
         // 如果 o1 和 o2 都不在上组，我是枚举大王！
         if (!upGroup.Contains(o1) && !upGroup.Contains(o2))
         {
-            if (o1 == 1 && o2 == 5 || o1 == 5 && o2 == 1) upGroup.Add(5);
-            else if (o1 == 1 && o2 == 7 || o1 == 7 && o2 == 1) upGroup.Add(1);
-            else if (o1 == 1 && o2 == 3 || o1 == 3 && o2 == 1) upGroup.Add(1);
-            else if (o1 == 5 && o2 == 7 || o1 == 7 && o2 == 5) upGroup.Add(5);
-            else if (o1 == 5 && o2 == 3 || o1 == 3 && o2 == 5) upGroup.Add(5);
-            else if (o1 == 7 && o2 == 3 || o1 == 3 && o2 == 7) upGroup.Add(3);
+            if (o1 == 1 && o2 == 5 || o1 == 5 && o2 == 1) 
+                      {
+                       upGroup.Add(1)
+                       upGroup.Remove(0);
+                       }
+            else if ((o1 == 1 && (o2 == 7 || o2 == 3)) || (o1 == 7 && o2 == 1) || (o1 == 3 && o2 == 1))
+                   {
+                        upGroup.Add(1);
+                        upGroup.Remove(0);
+                     }
+                  else if ((o1 == 5 && (o2 == 7 || o2 == 3)) || (o1 == 7 && o2 == 5) || (o1 == 3 && o2 == 5))
+                  {
+                     upGroup.Add(5);
+                    upGroup.Remove(0);
+                  }
+                   else if ((o1 == 7 && o2 == 3) || (o1 == 3 && o2 == 7))
+                     {
+                    upGroup.Add(3);
+                    upGroup.Remove(0);
+                      }
         }
             }
             if (P1BrightFireGroup == P1BrightFireEnum.MtStD3D4_Up)
@@ -2180,7 +2194,8 @@ namespace MyScriptNamespace
             P3LampWise = [0, 0, 0, 0, 0, 0, 0, 0];
         }
         [ScriptMethod(name: "P3_时间压缩_Buff记录", eventType: EventTypeEnum.StatusAdd, eventCondition: ["StatusID:regex:^(2455|2456|2464|2462|2461|2460)$"], userControl: false)]
-        public void P3_时间压缩_Buff记录(Event @event, ScriptAccessory accessory)
+       
+         public void P3_时间压缩_Buff记录(Event @event, ScriptAccessory accessory)
         {
             if (parse != 3.1) return;
             if (!ParseObjectId(@event["TargetId"], out var tid)) return;
@@ -2889,7 +2904,7 @@ namespace MyScriptNamespace
                     else
                     {
                         var lowIndex = P3FireBuff.LastIndexOf(1);
-                        if (lowIndex != myPartyIndex)
+                        if (lowIndex != myPartyIndex && lowIndex == 7 )
                         {
                             return (nLampIndex + 1) % 8;
                         }
@@ -2923,7 +2938,7 @@ namespace MyScriptNamespace
                     }
                     else
                     {
-                        return (nLampIndex + 4) % 8;
+                        return (nLampIndex + 0) % 8;
                     }
                     
                 }
