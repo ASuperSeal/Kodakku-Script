@@ -596,12 +596,32 @@ namespace MyScriptNamespace
             }
             if (P1BrightFireGroup == P1BrightFireEnum.MtGroup_Up)
             {
-                upGroup.Add(o1);
-                if (o1 != 2 && o2 != 2) upGroup.Add(2);
-                if (o1 != 4 && o2 != 4) upGroup.Add(4);
-                if (o1 != 6 && o2 != 6) upGroup.Add(6);
-                if (upGroup.Count < 4 && o1 != 0 && o2 != 0) upGroup.Add(0);
-                if (upGroup.Count < 4 && o1 != 1 && o2 != 1) upGroup.Add(1);
+                List<int> UpGroup = new List<int> {0, 4, 6, 2};  // 上组的初始值【0462】
+
+        
+        if (upGroup.Contains(o1) && !upGroup.Contains(o2)) return;
+        if (upGroup.Contains(o2) && !upGroup.Contains(o1)) return;
+        if (upGroup.Contains(o1) && upGroup.Contains(o2))
+        {
+            var o1Index = upGroup.IndexOf(o1);
+            var o2Index = upGroup.IndexOf(o2);
+            if (o1Index > o2Index) upGroup.RemoveAt(o1Index);
+            else upGroup.RemoveAt(o2Index);
+
+            upGroup.Add(1); // 添加 1
+            return;
+        }
+
+        // 如果 o1 和 o2 都不在上组，我是枚举大王！
+        if (!upGroup.Contains(o1) && !upGroup.Contains(o2))
+        {
+            if (o1 == 1 && o2 == 5 || o1 == 5 && o2 == 1) upGroup.Add(5);
+            else if (o1 == 1 && o2 == 7 || o1 == 7 && o2 == 1) upGroup.Add(1);
+            else if (o1 == 1 && o2 == 3 || o1 == 3 && o2 == 1) upGroup.Add(1);
+            else if (o1 == 5 && o2 == 7 || o1 == 7 && o2 == 5) upGroup.Add(5);
+            else if (o1 == 5 && o2 == 3 || o1 == 3 && o2 == 5) upGroup.Add(5);
+            else if (o1 == 7 && o2 == 3 || o1 == 3 && o2 == 7) upGroup.Add(3);
+        }
             }
             if (P1BrightFireGroup == P1BrightFireEnum.MtStD3D4_Up)
             {
@@ -627,7 +647,7 @@ namespace MyScriptNamespace
                 if (upGroup.Count < 4 && up0 != 0 && down0 != 0) upGroup.Add(0);
                 if (upGroup.Count < 4 && up0 != 4 && down0 != 4) upGroup.Add(4);
             }
-
+           
             var myindex = accessory.Data.PartyList.IndexOf(accessory.Data.Me);
             var dealpos1 = new Vector3(atEast ? 105.5f : 94.5f, 0, upGroup.Contains(myindex) ? 93 : 107);
             var dealpos2 = new Vector3(atEast ? 102 : 98, 0, upGroup.Contains(myindex) ? 93 : 107);
