@@ -617,7 +617,7 @@ namespace MyScriptNamespace
         {
             if (o1 == 1 && o2 == 5 || o1 == 5 && o2 == 1) 
                       {
-                       upGroup.Add(1)
+                       upGroup.Add(1);
                        upGroup.Remove(0);
                        }
             else if ((o1 == 1 && (o2 == 7 || o2 == 3)) || (o1 == 7 && o2 == 1) || (o1 == 3 && o2 == 1))
@@ -3481,8 +3481,8 @@ namespace MyScriptNamespace
         public void P4_时间结晶_分P(Event @event, ScriptAccessory accessory)
         {
             parse = 4.3d;
-            P4ClawBuff = [0, 0, 0, 0, 0, 0, 0, 0];
-            P4OtherBuff = [0, 0, 0, 0, 0, 0, 0, 0];
+            P4ClawBuff =  [ 0, 0, 0, 0, 0, 0, 0, 0 ];
+            P4OtherBuff = [ 0, 0, 0, 0, 0, 0, 0, 0 ];
             P4WhiteCirclePos = [];
             P4WaterPos = [];
         }
@@ -3529,6 +3529,8 @@ namespace MyScriptNamespace
             {
                 P4OtherBuff[index] = 5;
             }
+            accessory.Log.Debug(string.Join(", ", P4ClawBuff));
+            accessory.Log.Debug(string.Join(", ", P4OtherBuff));
         }
         [ScriptMethod(name: "P4_时间结晶_蓝线收集", eventType: EventTypeEnum.Tether, eventCondition: ["Id:0085"], userControl: false)]
         public void P4_时间结晶_蓝线收集(Event @event, ScriptAccessory accessory)
@@ -3627,7 +3629,40 @@ namespace MyScriptNamespace
             
             //buff后3.5s
             if (parse != 4.3) return;
+
+            int[] newOrder = [3, 2, 1, 0, 4, 5, 6, 7];               
+                                                                             
+                                                                          
+            List<int> tempP4ClawBuff = [0, 0, 0, 0, 0, 0, 0, 0];
+            List<int> tempP4OtherBuff = [0, 0, 0, 0, 0, 0, 0, 0];
+
+            // 重新排列 P4ClawBuff
+            for (int i = 0; i < P4ClawBuff.Count; i++)  
+            {
+                if (i < newOrder.Count())
+                {
+                    tempP4ClawBuff[i] = P4ClawBuff[newOrder[i]];
+                }
+            }
+             P4ClawBuff = tempP4ClawBuff;  
+
+            
+            for (int i = 0; i < P4OtherBuff.Count; i++)  
+            {
+                if (i < newOrder.Count())
+                {                       
+                    tempP4OtherBuff[i] = P4OtherBuff[newOrder[i]];
+                }
+            }
+             P4OtherBuff = tempP4OtherBuff;
+            accessory.Log.Debug(string.Join(", ", P4ClawBuff));
+            accessory.Log.Debug(string.Join(", ", P4OtherBuff));
+            accessory.Log.Debug("1234567");
+
+
+            int[] EUorder = [3, 2, 1, 0, 4, 5, 6, 7];
             var myIndex = accessory.Data.PartyList.IndexOf(accessory.Data.Me);
+                myIndex = Array.IndexOf(EUorder, myIndex);
             //短红
             if (P4ClawBuff[myIndex] == 1)
             {
